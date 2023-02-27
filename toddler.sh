@@ -9,6 +9,8 @@
 # TODO - make styling of the md files a bit better
 # TODO - make js examples
 # TODO - fix file exclusions
+# TODO - add persistent files that dont get wiped with every script invokation
+# TODO - make the script manage "TODO" folder with TODO.md / PERSISTENT.md, like a sideproject, low level ticket management
 
 ########################################################################################
 
