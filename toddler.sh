@@ -26,6 +26,13 @@ Purple='\033[0;35m' # Purple
 Cyan='\033[0;36m'   # Cyan
 White='\033[0;97m'  # White
 
+
+########################################################################################
+#                                                                                      #
+#                 EDIT THESE LOCATIONS ACCORDING TO YOUR NEEDS                         #
+#                                                                                      #
+########################################################################################
+
 # Set the directory to search
 # HINT - you can change this to specific paths relative to the scripts location
 # I'm working on automating this script with nodemon on every git action
@@ -33,10 +40,19 @@ directory= "./"
 
 # Set the output file (replace with your desired filename and directory)
 # I chose markdown cus of its preview abilities
-output_file="todo/TODO.md"
+output_file="./todo/TODO.md"
 
 
 ########################################################################################
+
+
+# Comment this line out if you wish to preserve your todo md files
+# This should prevent git from pushing the todo files to the github
+echo 'todo' >> .gitignore
+
+
+########################################################################################
+
 
 
 # Check if the output file exists.
@@ -74,9 +90,9 @@ echo " "
 # Heres some info on file exclusions:
 # https://math2001.github.io/article/bashs-find-command/
 # 
+#   -not -name '*.txt' \
 files=$(find . -type f \
   -not -name '*.log' \
-  -not -name '*.txt' \
   -not -name '*.sh' \
   -not -name '*.lock' \
   -not -name 'package.json' \
