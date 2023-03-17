@@ -48,7 +48,10 @@ output_file="./todo/TODO.md"
 
 # Comment this line out if you wish to preserve your todo md files
 # This should prevent git from pushing the todo files to the github
-echo 'todo' >> .gitignore
+# echo 'todo' >> .gitignore
+#
+# I need to implement logic that will check if .gitignore registered it already
+# and hopefully convert this into a CLI popup if the script is ran the first time
 
 
 ########################################################################################
